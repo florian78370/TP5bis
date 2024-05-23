@@ -11,13 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class ContactController extends AbstractController
 {
     /**
-     * @Route("/contacts", name="app_contacts", methods={"GET"})
+     * @Route("/contacts", name="contacts", methods={"GET"})
      */
     public function listeContacts(ContactRepository $repo)
     {
         
         $Contacts=$repo->findAll();
-        return $this->render('contact/listeContacts.html.twig',[
+        return $this->render('contact/listeContacts.html..twig',[
             'lesContacts' => $Contacts
         ]);
             
